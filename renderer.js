@@ -15,3 +15,8 @@ const $btn = document.getElementById('btn')
 $btn.addEventListener('click', () => {
   window.electronAPI.setTitle($title.value)
 })
+
+const openParams = document.getElementById('openParams');
+openParams.addEventListener('click', () => {
+  window.electronAPI.openParams()
+})

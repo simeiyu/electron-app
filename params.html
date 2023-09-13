@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Params</title>
+</head>
+<body>
+  <button id="a" type="button">A</button>
+  <button id="b" type="button">B</button>
+  <button id="c" type="button">C</button>
+  <script>
+    const $a = document.getElementById('a')
+    const $b = document.getElementById('b')
+    const $c = document.getElementById('c')
+    $a.addEventListener('click', () => {
+      window.electronAPI.tabChange('a')
+    })
+    $b.addEventListener('click', () => {
+      window.electronAPI.tabChange('b')
+    })
+    $c.addEventListener('click', () => {
+      window.electronAPI.tabChange('c')
+    })
+  </script>
+</body>
+</html>

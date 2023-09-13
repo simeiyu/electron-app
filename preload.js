@@ -21,4 +21,7 @@ contextBridge.exposeInMainWorld('versions', {
 
 contextBridge.exposeInMainWorld('electronAPI', {
   setTitle: (title) => ipcRenderer.send('set-title', title),
+  openParams: () => ipcRenderer.send('openParams'),
+  tabChange: (tab) => ipcRenderer.send('tabChange', tab),
+  getText: () => ipcRenderer.invoke('text'),
 })

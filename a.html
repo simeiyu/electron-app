@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A</title>
+  <style>
+    body {
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+<body>
+  <h1>Aaaa</h1>
+  <p id="text"></p>
+  <button type="button" id="btn">send</button>
+  <script>
+    const $btn = document.getElementById('btn')
+    const $text = document.getElementById('text')
+    $btn.addEventListener('click', async () => {
+      const text = await window.electronAPI.getText()
+      $text.innerText = text
+    })
+  </script>
+</body>
+</html>
